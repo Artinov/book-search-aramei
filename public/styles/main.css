@@ -1,0 +1,32 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.book {
+    border-bottom: 1px solid #CCC;
+    padding: 10px 0;
+}
+
+.book h2 {
+    text-transform: capitalize;
+}
+
+.book .book-info {
+    
+    display: table-row;
+}
+
+.book .book-info > div {
+  display: table-cell;
+  float: none;
+  vertical-align: top;
+}
+
+.book .book-info > div.tags {
+    vertical-align: bottom;
+}
