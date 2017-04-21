@@ -33,6 +33,25 @@ app.post("/book", function(req, res) {
     }));
 });
 
+app.get("/search", function(req, res) {
+    res.sendFile(path.join(__dirname, "./public/search.html"));
+});
+
+app.post("/searchresult", function(req, res) {
+    var searchRequest = req.body.searchRequest.toLowerCase();
+    res.send(books.filter(function(book) {
+        if (book.name.indexOf(searchRequest) != -1) {            
+            return {
+                id: book._id,
+                name: book.name,
+                author: book.author,
+                picture: book.picture,
+                tags: book.tags
+            };
+        };
+    }));
+})
+
 app.listen(3000, function() {
     console.log("Server is running on http://localhost:3000");
 });

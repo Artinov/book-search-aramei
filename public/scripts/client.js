@@ -6,10 +6,10 @@ function renderBooks() {
     $.ajax({
         url: "/books",
         method: "GET"
-    }).then(function(books) {
+    }).then(function(book) {
         var $booksWrapper = $("#books");
 
-        books.forEach(function(book) {
+        book.forEach(function(book) {
             var $bookTemplate = $("#template > div").clone();
 
             $bookTemplate.find("[data-book-name]").text(book.name);
