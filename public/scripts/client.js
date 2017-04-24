@@ -20,5 +20,5 @@ function renderBooks() {
 
             $booksWrapper.append($bookTemplate);
         });
-    })
-}
+    });
+};
